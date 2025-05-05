@@ -1,0 +1,242 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  /* Encabezado */
+  .head {
+    height: 70vh;
+    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), 
+                url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+  }
+  
+  .header-overlay {
+    max-width: 800px;
+    padding: 20px;
+  }
+  
+  .head h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .slogan {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  /* Navegación */
+  nav {
+    background-color: #2c3e50;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    padding: 10px 15px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+  }
+  
+  nav a:hover, nav a.active {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  /* Contenido dinámico */
+  .seccion-contenido {
+    display: none;
+    padding: 80px 0;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .seccion-contenido.active {
+    display: block;
+  }
+  
+  /* Sección Inicio */
+  .bienvenida {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .bienvenida h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+  }
+  
+  .tarjeta-bienvenida {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .tarjeta-bienvenida img {
+    width: 50%;
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  .texto-bienvenida {
+    padding: 30px;
+    text-align: left;
+    width: 50%;
+  }
+  
+  .texto-bienvenida p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+  
+  /* Sección Servicios */
+  .grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+  }
+  
+  .servicio {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+  }
+  
+  .servicio:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .servicio-icono {
+    font-size: 3em;
+    color: #3498db;
+    margin-bottom: 20px;
+  }
+  
+  .servicio h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+  }
+  
+  .servicio p {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 1rem;
+  }
+  
+
+  
+  /* Pie de página */
+  footer {
+    background-color: #2c3e50;
+    color: #bdc3c7;
+    padding: 60px 0 0;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    color: #bdc3c7;
+  }
+  
+  /* Animaciones */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  /* Responsive */
+  @media (max-width: 992px) {
+    .tarjeta-bienvenida {
+      flex-direction: column;
+    }
+    
+    .tarjeta-bienvenida img,
+    .texto-bienvenida {
+      width: 100%;
+    }
+    
+    .contacto-container {
+      flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    nav a {
+      margin: 0 10px;
+      padding: 8px 12px;
+      font-size: 1rem;
+    }
+    
+    .head h1 {
+      font-size: 2.5rem;
+    }
+    
+    .slogan {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    nav {
+      padding: 10px 0;
+    }
+    
+    nav a {
+      display: block;
+      margin: 5px 0;
+      text-align: center;
+    }
+    
+    .head h1 {
+      font-size: 2rem;
+    }
+    
+    .slogan {
+      font-size: 1rem;
+    }
+    
+    .seccion-contenido {
+      padding: 50px 0;
+    }
+  }
